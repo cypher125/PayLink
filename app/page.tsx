@@ -241,7 +241,7 @@ export default function LandingPage() {
                 <div className="relative z-[1]">
                   <PhoneFrame>
                 <Image
-                  src="/app screenshot.jpeg"
+                  src="/app_screenshot.jpeg"
                   alt="App Screenshot"
                   width={400}
                   height={800}

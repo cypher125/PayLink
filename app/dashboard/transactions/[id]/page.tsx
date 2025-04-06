@@ -55,8 +55,16 @@ interface UITransaction {
   service_name?: string;
 }
 
-export default function TransactionDetailsPage({ params }: { params: { id: string } }) {
-  // Remove the React.use() call that's causing the error
+// Define proper page props interface for Next.js App Router
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default function TransactionDetailsPage({ params }: PageProps) {
+  // Get transaction ID from params
   const { id } = params;
 
   const [transaction, setTransaction] = useState<UITransaction | null>(null)
